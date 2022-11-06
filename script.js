@@ -17,7 +17,7 @@ dice.addEventListener("click", function(){
         if (xhr.readyState === XMLHttpRequest.DONE){
             let response = JSON.parse(xhr.responseText);
             adviceNumber.textContent = `Advice #${response.slip.id}`;
-            advice.textContent = response.slip.advice;
+            advice.textContent = `"${response.slip.advice}"`;
 
         }
     })
